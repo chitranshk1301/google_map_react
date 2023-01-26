@@ -1,0 +1,21 @@
+.App {
+    background-color: #a1e3ff;
+}
+
+
+.logo {
+    position: absolute;
+    width: 160px;
+    height: 69px;
+    left: 67px;
+    top: 6px;
+}
+
+.header {
+    position: absolute;
+    height: 80px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: #FFFFFF;
+}
