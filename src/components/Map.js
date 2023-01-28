@@ -10,7 +10,6 @@ import {
   Text,
 } from '@chakra-ui/react'
 import { FaLocationArrow, FaTimes } from 'react-icons/fa'
-
 import {
   useJsApiLoader,
   GoogleMap,
@@ -28,7 +27,7 @@ function Map() {
     libraries: ['places'],
   })
 
-  const [map, setMap] = useState(/** @type google.maps.Map */ (null))
+  const [map, setMap] = useState(/** @type google.maps.Map */(null))
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
 
@@ -72,12 +71,12 @@ function Map() {
       h='100vh'
       w='100vw'
     >
-      <Box position='absolute' left={800} top={170} h='100%' w='100%'>
+      <Box position='absolute' left={900} top={170} h='100%' w='100%'>
         {/* Google Map Box */}
         <GoogleMap
           center={center}
           zoom={15}
-          mapContainerStyle={{ width: '50%', height: '70%' }}
+          mapContainerStyle={{ width: '40%', height: '60%' }}
           options={{
             zoomControl: false,
             streetViewControl: false,
@@ -93,49 +92,56 @@ function Map() {
         </GoogleMap>
       </Box>
 
-        <HStack spacing={2} justifyContent='space-between'>
-          <span className='origin-txt'>Origin</span>
-          <Box flexGrow={1} className="origin">
-            <Autocomplete>
-              <Input type='text' placeholder='Origin' ref={originRef} />
-            </Autocomplete>
-          </Box>
-          <span className='destination-txt'>Destination</span>
-          <Box flexGrow={1} className="destination">
-            <Autocomplete>
-              <Input
-                type='text'
-                placeholder='Destination'
-                ref={destiantionRef}
-              />
-            </Autocomplete>
-          </Box>
-
-          <ButtonGroup>
-            <Button borderRadius='xxl' height={20} colorScheme={'facebook'} className='btn' type='submit' onClick={calculateRoute}>
-              Calculate
-            </Button>
-            <IconButton
-              className='clear-btn'
-              aria-label='center back'
-              icon={<FaTimes />}
-              onClick={clearRoute}
+      <HStack spacing={2} justifyContent='space-between'>
+        <span className='origin-txt'>Origin</span>
+        <Box className="origin" bg='white'>
+          <Autocomplete>
+            <Input type='text' placeholder='Origin' ref={originRef} size='lg' />
+          </Autocomplete>
+        </Box>
+        <span className='destination-txt'>Destination</span>
+        <Box className="destination" bg='white'>
+          <Autocomplete>
+            <Input
+              type='text'
+              placeholder='Destination'
+              ref={destiantionRef}
+              size='lg'
             />
-          </ButtonGroup>
-        </HStack>
+          </Autocomplete>
+        </Box>
 
-          <Text>Distance: {distance} </Text>
-
+        <ButtonGroup>
+          <Button borderRadius='xxl' height={20} colorScheme={'facebook'} className='btn' type='submit' onClick={calculateRoute}>
+            Calculate
+          </Button>
           <IconButton
+            className='clear-btn'
             aria-label='center back'
-            className='center-btn'
-            icon={<FaLocationArrow />}
-            isRound
-            onClick={() => {
-              map.panTo(center)
-              map.setZoom(15)
-            }}
+            icon={<FaTimes />}
+            onClick={clearRoute}
           />
+        </ButtonGroup>
+      </HStack>
+
+      <Box className='distance-card' maxW='xl' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+        <Text><span>Distance:</span>     <span>{distance}</span> </Text>
+        <Box className='lower-box' maxW='xl' borderWidth='1px' overflow='hidden'>
+            
+        </Box>
+      </Box>
+
+
+      <IconButton
+        aria-label='center back'
+        className='center-btn'
+        icon={<FaLocationArrow />}
+        isRound
+        onClick={() => {
+          map.panTo(center)
+          map.setZoom(15)
+        }}
+      />
     </Flex>
   )
 }

@@ -1,8 +1,8 @@
 function Card(props) {
     return (
-        <div className="card">
+        <div>
             Distance      {props.distance} km
-            <div className="card-bottom">
+            <div>
                 The distance between {props.origin} and {props.destination} via the selected route(s) is {props.distance} kms.
             </div>
         </div>
