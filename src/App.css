@@ -51,23 +51,18 @@
     width: 250px;
     height: 45px;
     left: 164px;
-    top: 417px;
+    top: 517px;
 }
 
 .btn {
     position: absolute;
     width: 141px;
-    height: 62px;
+    height: 50px;
     left: -380px;
     top: 262px;
-    border-radius: 32px;
+    border-radius: 50px;
 }
 
-/* .btn:hover {
-    background: #344cd7;
-    color: white;
-    cursor: pointer;
-} */
 
 .origin-txt {
     position: absolute;
@@ -95,7 +90,7 @@
     width: 111px;
     height: 22px;
     left: 165px;
-    top: 392px;
+    top: 492px;
 
     font-family: 'IBM Plex Sans';
     font-style: normal;
@@ -116,12 +111,25 @@
     top: 90px;
 }
 
-.btn {
-    border-radius: 50px;
-}
-
 .clear-btn {
     position: absolute;
     right: 494px;
     top: 194px;
+}
+
+.distance-card {
+    position: absolute;
+    height: 200px;
+    width: 900px;
+    top: 600px;
+    left: 170px;    
+    border-radius: 8px;
+    background-color: white;
+}
+
+.lower-box {
+    position: relative;
+    top: 75px;
+    height: 100px;
+    background-color: #F4F8FA;
 }
