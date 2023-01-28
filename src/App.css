@@ -6,6 +6,14 @@
     top: 6px;
 }
 
+.container {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    background-color: #F4F8FA;
+}
+
 .header {
     position: absolute;
     height: 80px;
@@ -15,27 +23,17 @@
     background: #FFFFFF;
 }
 
-.App {
-    background-color: #F4F8FA;
-}
 
 .subtitle {
-    width: 560px;
-    height: 24px;
+    position: absolute;
+    left: 690px;
+    top: 60px;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     color: #1B31A8;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 156px;
-    top: 195px;
 }
 
 .origin {
@@ -59,7 +57,7 @@
     width: 141px;
     height: 50px;
     left: -380px;
-    top: 262px;
+    top: 280px;
     border-radius: 50px;
 }
 
@@ -108,7 +106,7 @@
 .center-btn {
     position: absolute;
     right: 480px;
-    top: 90px;
+    top: 114px;
 }
 
 .clear-btn {
@@ -122,7 +120,7 @@
     height: 200px;
     width: 900px;
     top: 600px;
-    left: 170px;    
+    left: 170px;
     border-radius: 8px;
     background-color: white;
 }
@@ -133,3 +131,19 @@
     height: 100px;
     background-color: #F4F8FA;
 }
+
+.distance-txt {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #1E2A32;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
