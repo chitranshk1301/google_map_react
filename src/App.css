@@ -117,7 +117,7 @@
 
 .distance-card {
     position: absolute;
-    height: 200px;
+    height: 130px;
     width: 900px;
     top: 600px;
     left: 170px;
@@ -133,17 +133,46 @@
 }
 
 .distance-txt {
+    position: relative;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
     color: #1E2A32;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+    top: 35px;
+    left: 30px;
 }
 
+.dist-km {
+    position: relative;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 120%;
+    text-align: right;
+    color: #0079FF;
+    top: 35px;
+    left: 300px;
+}
+
+.stop {
+    position: absolute;
+    width: 250px;
+    height: 45px;
+    left: 165px;
+    top: 320px;
+}
+
+.stop-txt {
+    position: absolute;
+    width: 111px;
+    height: 22px;
+    left: 165px;
+    top: 296px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}

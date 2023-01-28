@@ -109,6 +109,31 @@ function Map() {
             </InputGroup>
           </Autocomplete>
         </Box>
+
+        <span className='stop-txt'>Stop</span>
+        <Box className="stop" bg='white'>
+          <Autocomplete>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents='none'
+                color='gray.300'
+                fontSize='1.2em'
+                children='📍'
+              />
+              <Input
+                type='text'
+                placeholder='Stop'
+                // ref={destiantionRef}
+                size='lg'
+              />
+            </InputGroup>
+
+          </Autocomplete>
+        </Box>
+        <Text> Add another stop</Text>
+
+
+
         <span className='destination-txt'>Destination</span>
         <Box className="destination" bg='white'>
           <Autocomplete>
@@ -145,9 +170,6 @@ function Map() {
 
       <Box className='distance-card' boxShadow='xs' maxW='xl' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Text><span className='distance-txt'>Distance</span>     <span className='dist-km'>{distance}</span> </Text>
-        <Box className='lower-box' maxW='xl' borderWidth='1px' overflow='hidden'>
-
-        </Box>
       </Box>
 
 
