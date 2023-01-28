@@ -11,6 +11,8 @@ import {
   Text,
   InputGroup,
 } from '@chakra-ui/react'
+import {  AddIcon } from '@chakra-ui/icons'
+
 import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 import {
   useJsApiLoader,
@@ -130,7 +132,8 @@ function Map() {
 
           </Autocomplete>
         </Box>
-        <Text> Add another stop</Text>
+
+        <Text className='aas-text'> <AddIcon /> Add another stop</Text>
 
 
 
