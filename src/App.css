@@ -15,15 +15,6 @@
     background: #FFFFFF;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 80px;
-    background-color: #F4F8FA;
-
-}
-
 .App {
     background-color: #F4F8FA;
 }
@@ -35,95 +26,60 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 120%;
     text-align: center;
     color: #1B31A8;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    margin-left: 70vh;
-    padding-top: 30px;
 }
 
-.form-container {
-    height: 820px;
-    width: 158px;
-
+.box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 156px;
+    top: 195px;
 }
 
 .origin {
-    box-sizing: border-box;
-
     position: absolute;
     width: 250px;
     height: 45px;
-    left: 156px;
+    left: 165px;
     top: 195px;
-
-    background: #FFFFFF;
-    border: 1px solid #DCDDEC;
-    border-radius: 6px;
-}
-
-.stop {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 250px;
-    height: 45px;
-    left: 156px;
-    top: 291px;
-
-    background: #FFFFFF;
-    border: 1px solid #DCDDEC;
-    border-radius: 6px;
 }
 
 .destination {
-    box-sizing: border-box;
-
     position: absolute;
     width: 250px;
     height: 45px;
-    left: 159px;
+    left: 164px;
     top: 417px;
-
-    background: #FFFFFF;
-    border: 1px solid #DCDDEC;
-    border-radius: 6px;
 }
 
-.calculate-btn {
+.btn {
     position: absolute;
-    border: 0;
     width: 141px;
     height: 62px;
-    left: 505px;
+    left: -380px;
     top: 262px;
-    background: #1B31A8;
     border-radius: 32px;
-    color: white;
-    transition: ease-in-out 0.2s;
 }
 
-.calculate-btn:hover {
+/* .btn:hover {
     background: #344cd7;
     color: white;
     cursor: pointer;
-}
+} */
 
 .origin-txt {
     position: absolute;
     width: 111px;
     height: 22px;
-    left: 159px;
+    left: 177px;
     top: 170px;
 
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     /* or 17px */
 
@@ -133,37 +89,18 @@
     color: #000000;
 }
 
-.stop-txt {
-    position: absolute;
-    width: 111px;
-    height: 22px;
-    left: 159px;
-    top: 266px;
-
-    font-family: 'IBM Plex Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    /* or 17px */
-
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-}
 
 .destination-txt {
     position: absolute;
     width: 111px;
     height: 22px;
-    left: 162px;
+    left: 165px;
     top: 392px;
 
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 120%;
     /* or 17px */
 
@@ -173,36 +110,18 @@
     color: #000000;
 }
 
-.aas-txt {
+.center-btn {
     position: absolute;
-    width: 160px;
-    height: 25px;
-    left: 270px;
-    top: 350px;
-
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 110%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #2E2E2E;
-    transition: ease-in-out 0.2s;
+    right: 480px;
+    top: 90px;
 }
 
-.aas-txt:hover {
-    cursor: pointer;
-    color: rgb(147, 143, 143);
+.btn {
+    border-radius: 50px;
 }
 
-.map-container {
+.clear-btn {
     position: absolute;
-    height: 560px;
-    width: 600px;
-    left: 1000px;
-    top: 200px;
-    bottom: 102px;
-    right: 104px;
+    right: 494px;
+    top: 194px;
 }
