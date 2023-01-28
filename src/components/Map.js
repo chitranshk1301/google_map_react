@@ -7,7 +7,9 @@ import {
   IconButton,
   Input,
   SkeletonText,
+  InputLeftElement,
   Text,
+  InputGroup,
 } from '@chakra-ui/react'
 import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 import {
@@ -19,7 +21,7 @@ import {
 } from '@react-google-maps/api'
 import { useRef, useState } from 'react'
 
-const center = { lat: 48.8584, lng: 2.2945 }
+const center = { lat: 19.0760, lng: 72.8777 }
 
 function Map() {
   const { isLoaded } = useJsApiLoader({
@@ -71,12 +73,12 @@ function Map() {
       h='100vh'
       w='100vw'
     >
-      <Box position='absolute' left={900} top={170} h='100%' w='100%'>
+      <Box position='absolute' boxShadow='xl' left={900} top={170} h='60%' w='40%'>
         {/* Google Map Box */}
         <GoogleMap
           center={center}
           zoom={15}
-          mapContainerStyle={{ width: '40%', height: '60%' }}
+          mapContainerStyle={{ width: '100%', height: '100%' }}
           options={{
             zoomControl: false,
             streetViewControl: false,
@@ -96,18 +98,35 @@ function Map() {
         <span className='origin-txt'>Origin</span>
         <Box className="origin" bg='white'>
           <Autocomplete>
-            <Input type='text' placeholder='Origin' ref={originRef} size='lg' />
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents='none'
+                color='gray.300'
+                fontSize='1.2em'
+                children='🟢'
+              />
+              <Input type='text' placeholder='Origin' ref={originRef} size='lg' />
+            </InputGroup>
           </Autocomplete>
         </Box>
         <span className='destination-txt'>Destination</span>
         <Box className="destination" bg='white'>
           <Autocomplete>
-            <Input
-              type='text'
-              placeholder='Destination'
-              ref={destiantionRef}
-              size='lg'
-            />
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents='none'
+                color='gray.300'
+                fontSize='1.2em'
+                children='📍'
+              />
+              <Input
+                type='text'
+                placeholder='Destination'
+                ref={destiantionRef}
+                size='lg'
+              />
+            </InputGroup>
+
           </Autocomplete>
         </Box>
 
@@ -124,10 +143,10 @@ function Map() {
         </ButtonGroup>
       </HStack>
 
-      <Box className='distance-card' maxW='xl' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-        <Text><span>Distance:</span>     <span>{distance}</span> </Text>
+      <Box className='distance-card' boxShadow='xs' maxW='xl' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+        <Text><span className='distance-txt'>Distance</span>     <span className='dist-km'>{distance}</span> </Text>
         <Box className='lower-box' maxW='xl' borderWidth='1px' overflow='hidden'>
-            
+
         </Box>
       </Box>
 
